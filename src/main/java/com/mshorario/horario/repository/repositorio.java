@@ -1,8 +1,27 @@
 package com.mshorario.horario.repository;
 
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import com.mshorario.horario.model.Horario;
+
+
+
 @Repository
-public interface repositorio {
+public interface repositorio extends MongoRepository<Horario, String> {
+    
+    Optional<Horario> findByIdcarrera(String idCarrera);
+    Optional<Horario> findByDia(String dia);
+    Optional<Horario> mostrarPorAsignatura(String asignatura);
+
+
+    boolean existsByHora(String hora); 
+
+    void deleteByHora(String hora);
+
+
+
 
 }
