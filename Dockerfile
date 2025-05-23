@@ -16,7 +16,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Etapa 2: Runtime con JDK 21 ligero
-FROM eclipse-temurin:21.0.4_9-jdk
+FROM eclipse-temurin:21.0.4-jdk
 
 WORKDIR /app
 
