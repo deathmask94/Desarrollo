@@ -34,7 +34,7 @@ public class controlador {
         return servicio.crearHorario(horario);
     }
 
-    @DeleteMapping("/borrar/{hora}")
+    @DeleteMapping("/borrar")
     public ResponseEntity<String> eliminarPorHora(@PathVariable String hora) {
         servicio.eliminarPorHora(hora);
         return ResponseEntity.ok("Horario eliminado correctamente");
