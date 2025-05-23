@@ -7,7 +7,7 @@ import com.mshorario.horario.model.Horario;
 
 @Repository
 public interface repositorio extends MongoRepository<Horario, String> {
-    Optional<Horario> findByIdcarrera(String idCarrera);
+    Optional<Horario> findByIdCarrera(String idCarrera);
     Optional<Horario> findByDia(String dia);
     Optional<Horario> findByAsignatura(String asignatura);
     boolean existsByHora(String hora);
